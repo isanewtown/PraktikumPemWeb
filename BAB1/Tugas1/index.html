@@ -6,18 +6,63 @@
     <title>Isanewtown Game-Center</title>
     <link rel="stylesheet" href="style.css"> </head>
 <body>
+     <div class="container">
+        <center>
+      <form action="" name="myForm">
+        <label for="nama">Masukkan Nama</label> <br />
+        <input type="text" name="nama" id="nama" /> <br /><br />
+
+        <button type="button" name="simpan" onclick="hari()">Simpan</button>
+      </form>
+
+      <p id="cetak"></p>
+    </center>
+          <script>
+        function hari() {
+        let myForm = document.myForm;
+        let nama = myForm.nama.value;
+
+        let hariIni = new Date().getDay();
+        let hari = "";
+
+        switch (hariIni) {
+          case 0:
+            hari = "Minggu";
+            break;
+          case 1:
+            hari = "Senin";
+            break;
+          case 2:
+            hari = "Selasa";
+            break;
+          case 3:
+            hari = "Rabu";
+            break;
+          case 4:
+            hari = "Kamis";
+            break;
+          case 5:
+            hari = "Jumat";
+            break;
+          case 6:
+            hari = "Sabtu";
+            break;
+        }
+        document.getElementById(
+          "cetak"
+        ).innerHTML = `Halo ${nama} hari ini hari ${hari}`;
+      }
+    </script>
 
     <header>
-        <h1><img src="asettugas1/logoweb-removebg-preview.png"></h1>
+        <img class="logo" src="asettugas1/logoweb-removebg-preview.png">
     </header>
         <center>
-        <nav>
-            <a href="login.html"><img src="asettugas1/login-removebg-preview.png"style="width:300px;height:400px"></a>   
-        </nav>
+            <a href="login.html"><img class="login" src="asettugas1/login-removebg-preview.png"></a>   
         </center>
     <footer>
         <p>&copy; 2025 isanewtown game-center. All Rights Reserved.</p>
     </footer>
-
+    </div>
 </body>
 </html>
