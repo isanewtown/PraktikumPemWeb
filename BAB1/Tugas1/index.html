@@ -16,6 +16,17 @@
       </form>
 
       <p id="cetak"></p>
+
+                    <button onclick="myFunction()">Jangan di klik ini snackbar</button>
+                    <div id="snackbar">Selamat Datang di Web Saya</div>
+                    <script>
+                    function myFunction() {
+                    var x = document.getElementById("snackbar");
+                    x.className = "show";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                    }
+                    </script>
+
     </center>
           <script>
         function hari() {
@@ -24,6 +35,7 @@
 
         let hariIni = new Date().getDay();
         let hari = "";
+        
 
         switch (hariIni) {
           case 0:
